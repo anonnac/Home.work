@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  width: 1000px;
+  margin: 20px auto;
+  list-style: none;
+  display: flex;
+  background: black;
+}
+.nav > li {
+  width: 100%;
+  position: relative;
+}
+.nav > li > a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  display: block;
+  line-height: 50px;
+}
+.nav > li:hover::before {
+  width: 100%;
+}
+.nav > li:hover > .snav {
+  top: 100%;
+  visibility: visible;
+}
+.nav > li::before {
+  content: "";
+  width: 100%;
+  height: 6px;
+  background: blue;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  transition: 0.25s;
+  transform: translateX(-50%);
+}
+.nav > li .snav {
+  width: 100%;
+  list-style: none;
+  position: absolute;
+  background: #FBFBFB;
+  top: 110%;
+  left: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: -10;
+}/*# sourceMappingURL=style.css.map */
